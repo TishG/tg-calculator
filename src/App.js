@@ -7,7 +7,8 @@ import Calculator from "./components/Calculator";
 //Redux
 import { connect } from "react-redux";
 
-const App = ({ bgColor }) => {
+const App = props => {
+  const { bgColor } = props;
   //styling
   const AppStyles = {
     backgroundColor: bgColor
