@@ -19,7 +19,6 @@ const Calculator = props => {
     setEnter,
     result
   } = props;
-  console.log(limitReached);
   const handleValue = val => {
     if (value.length <= 35) {
       let newValue;
