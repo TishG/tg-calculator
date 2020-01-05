@@ -22,7 +22,6 @@ const Calculator = props => {
     setEnter,
     setError
   } = props;
-  console.log(error);
   const handleValue = async val => {
     try {
       if (value.length <= 35) {
