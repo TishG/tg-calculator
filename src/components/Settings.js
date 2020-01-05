@@ -7,10 +7,13 @@ import {
   setVisibility
 } from "../redux/actionCreators/settingsActions";
 
-const Settings = ({ visible, setVisibility, setBGColor }) => {
+const Settings = props => {
+  const { visible, setVisibility, setBGColor } = props;
   return (
     <div className="settings">
-      <button className="btn" onClick={setVisibility}>{visible ? 'Close' : 'Change Background Color'}</button>
+      <button className="btn" onClick={setVisibility}>
+        {visible ? "Close" : "Change Background Color"}
+      </button>
       <div
         className="bg-color-changer"
         style={visible ? { visibility: "visible" } : { visibility: "hidden" }}

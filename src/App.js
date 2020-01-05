@@ -2,6 +2,7 @@ import React from "react";
 
 //components
 import Settings from "./components/Settings";
+import Calculator from "./components/Calculator";
 
 //Redux
 import { connect } from "react-redux";
@@ -15,7 +16,8 @@ const App = ({ bgColor }) => {
   return (
     <div className="app" style={AppStyles}>
       <Settings />
-      <h1>tishg calc</h1>
+      <h1 className="title">TishG Calculator</h1>
+      <Calculator />
     </div>
   );
 };
