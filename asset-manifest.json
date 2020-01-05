@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/tg-calculator/static/css/main.20167563.chunk.css",
+    "main.js": "/tg-calculator/static/js/main.a019c08c.chunk.js",
+    "main.js.map": "/tg-calculator/static/js/main.a019c08c.chunk.js.map",
+    "runtime-main.js": "/tg-calculator/static/js/runtime-main.9cdfb078.js",
+    "runtime-main.js.map": "/tg-calculator/static/js/runtime-main.9cdfb078.js.map",
+    "static/js/2.ea88ac41.chunk.js": "/tg-calculator/static/js/2.ea88ac41.chunk.js",
+    "static/js/2.ea88ac41.chunk.js.map": "/tg-calculator/static/js/2.ea88ac41.chunk.js.map",
+    "index.html": "/tg-calculator/index.html",
+    "precache-manifest.e2d747481c63b13f7ca41b750c044c3c.js": "/tg-calculator/precache-manifest.e2d747481c63b13f7ca41b750c044c3c.js",
+    "service-worker.js": "/tg-calculator/service-worker.js",
+    "static/css/main.20167563.chunk.css.map": "/tg-calculator/static/css/main.20167563.chunk.css.map",
+    "static/js/2.ea88ac41.chunk.js.LICENSE": "/tg-calculator/static/js/2.ea88ac41.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9cdfb078.js",
+    "static/js/2.ea88ac41.chunk.js",
+    "static/css/main.20167563.chunk.css",
+    "static/js/main.a019c08c.chunk.js"
+  ]
+}
