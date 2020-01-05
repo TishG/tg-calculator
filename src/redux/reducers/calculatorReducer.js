@@ -7,7 +7,8 @@ import {
 
 const initialState = {
   value: "0",
-  limitReached: false
+  limitReached: false,
+  result: false
 };
 
 export const calculatorReducer = (state = initialState, action) => {
@@ -15,23 +16,28 @@ export const calculatorReducer = (state = initialState, action) => {
     case SET_VALUE:
       return {
         ...state,
-        value: action.payload
+        value: action.payload,
+        result: false
       };
     case SET_ENTER:
       return {
         ...state,
-        value: eval(state.value)
+        value: eval(state.value),
+        limitReached: false,
+        result: true
       };
     case SET_CLEAR:
       return {
         ...state,
         value: "0",
-        limitReached: false
+        limitReached: false,
+        result: false
       };
     case SET_LIMIT_REACHED:
       return {
         ...state,
-        limitReached: true
+        limitReached: true,
+        result: false
       };
     default:
       return state;

@@ -16,7 +16,8 @@ const Calculator = props => {
     setLimitReached,
     setValue,
     setClear,
-    setEnter
+    setEnter,
+    result
   } = props;
   const handleValue = val => {
     if (value.length <= 35) {
@@ -28,14 +29,22 @@ const Calculator = props => {
         newValue = value + val;
         setValue(newValue);
       }
-    } else {
+    }
+    if (value.length > 36) {
       setLimitReached();
     }
   };
   return (
     <div className="calculator">
       <div className="frame">
-        <div className="screen">
+        <div
+          className="screen"
+          style={
+            result
+              ? { backgroundColor: "#e5fbe5" }
+              : { backgroundColor: "#ffffff" }
+          }
+        >
           <div className="value">{value}</div>
           <small
             style={limitReached ? { display: "block" } : { display: "none" }}
@@ -111,7 +120,8 @@ const Calculator = props => {
 const mapStateToProps = state => {
   return {
     value: state.calculator.value,
-    limitReached: state.calculator.limitReached
+    limitReached: state.calculator.limitReached,
+    result: state.calculator.result
   };
 };
 

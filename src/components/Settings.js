@@ -16,7 +16,7 @@ const Settings = props => {
       </button>
       <div
         className="bg-color-changer"
-        style={visible ? { visibility: "visible" } : { visibility: "hidden" }}
+        style={visible ? { display: "block" } : { display: "none" }}
       >
         <div
           className="btn color"

@@ -16,7 +16,8 @@ body {
 
 .app {
   padding-top: 0.5em;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .app .title {
@@ -35,7 +36,7 @@ body {
   border: 1px solid rgb(0, 0, 0, 0.5);
   border-radius: 3px;
   color: rgb(0, 0, 0, 0.75);
-  background-color: rgba(245, 245, 245, 0.75);
+  background-color: rgba(245, 245, 245);
   padding: 0.5em;
   transition: 0.3s background-color;
 }
@@ -49,6 +50,7 @@ body {
   border-radius: 3px;
   width: inherit;
   margin-top: 5px;
+  position: absolute;
 }
 
 .settings .bg-color-changer .color {
@@ -110,11 +112,11 @@ body {
   border: 2px solid lightgray;
   background-color: whitesmoke;
   font-size: 1.5em;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 
 .screen .value {
-  color:rgba(0,0,0,0.75);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .calc-btns-container {
