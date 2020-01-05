@@ -30,7 +30,7 @@ const Calculator = props => {
         setValue(newValue);
       }
     }
-    if (value.length > 36) {
+    if (val.length > 36) {
       setLimitReached();
     }
   };
