@@ -2,8 +2,81 @@
   box-sizing: border-box;
 }
 
+.btn:active {
+  transform: scale(0.98);
+}
+
 body {
   margin: 0;
-  padding:0;
-  height:100vh;
+  padding: 0;
+  height: 100vh;
+  text-align: center;
 }
+
+/***** App Componenent *****/
+
+.app {
+  padding-top: 0.5em;
+  height: 100vh;
+}
+/***** App Componenent *****/
+
+/***** Settings Componenent *****/
+.settings {
+  margin: auto;
+  width: 190px;
+}
+.settings .btn {
+  width: inherit;
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0, 0.5);
+  border-radius: 3px;
+  color: rgb(0, 0, 0, 0.75);
+  background-color: rgba(245, 245, 245, 0.75);
+  padding: 0.5em;
+  transition: 0.3s background-color;
+}
+
+.settings .btn:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.settings .bg-color-changer {
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: inherit;
+  margin-top: 5px;
+}
+
+.settings .bg-color-changer .color {
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s background-color;
+}
+
+.settings .bg-color-changer .color:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+  width: 188px;
+}
+
+.settings .bg-color-changer .color .box {
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgb(0, 0, 0, 0.75);
+}
+
+.settings .bg-color-changer .color .box.blue {
+  background-color: rgb(240, 248, 255);
+}
+.settings .bg-color-changer .color .box.purple {
+  background-color: rgb(230, 230, 250);
+}
+.settings .bg-color-changer .color .box.green {
+  background-color: rgb(210, 248, 210);
+}
+.settings .bg-color-changer .color .box.pink {
+  background-color: rgb(255, 233, 236);
+}
+/***** Settings Componenent *****/

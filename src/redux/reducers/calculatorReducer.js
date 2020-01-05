@@ -1,6 +1,6 @@
 const initialState = {};
 
-const calculatorReducer = (state = initialState, action) => {
+export const calculatorReducer = (state = initialState, action) => {
   return state;
 };
 

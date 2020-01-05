@@ -1,7 +1,26 @@
-const initialState = {};
+import {
+  SET_BACKGROUND_COLOR,
+  SET_VISIBILITY
+} from "../constants/settingsConstants";
 
-const settingsReducer = (state = initialState, action) => {
-  return state;
+const initialState = {
+  backgroundColor: "rgb(230,230,250)",
+  visible: false
 };
 
-export default settingsReducer;
+export const settingsReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case SET_BACKGROUND_COLOR:
+      return {
+        ...state,
+        backgroundColor: action.payload
+      };
+    case SET_VISIBILITY:
+      return {
+        ...state,
+        visible: !state.visible
+      };
+    default:
+      return state;
+  }
+};

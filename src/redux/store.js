@@ -1,10 +1,10 @@
 import { createStore, combineReducers } from "redux";
-import settings from "./reducers/settingsReducer";
-import calculator from "./reducers/calculatorReducer";
+import { settingsReducer } from "./reducers/settingsReducer";
+import { calculatorReducer } from "./reducers/calculatorReducer";
 
-export const store = createStore(
-  combineReducers({
-    settings,
-    calculator
-  })
-);
+const reducer = combineReducers({
+  settings: settingsReducer,
+  calculator: calculatorReducer
+});
+
+export const store = createStore(reducer);
