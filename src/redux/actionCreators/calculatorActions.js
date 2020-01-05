@@ -1,4 +1,4 @@
-import { SET_VALUE, SET_LIMIT_REACHED, SET_CLEAR, SET_ENTER } from "../constants/calculatorConstants";
+import { SET_VALUE, SET_LIMIT_REACHED, SET_CLEAR, SET_ENTER, SET_ERROR } from "../constants/calculatorConstants";
 
 export const setValue = val => {
   return {
@@ -24,3 +24,9 @@ export const setEnter = () => {
         type: SET_ENTER
     }
 }
+
+export const setError = () => {
+  return {
+    type: SET_ERROR
+  };
+};

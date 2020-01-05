@@ -6,32 +6,50 @@ import {
   setValue,
   setLimitReached,
   setClear,
-  setEnter
+  setEnter,
+  setError
 } from "../redux/actionCreators/calculatorActions";
 
 const Calculator = props => {
   const {
     value,
     limitReached,
+    result,
+    error,
     setLimitReached,
     setValue,
     setClear,
     setEnter,
-    result
+    setError
   } = props;
-  const handleValue = val => {
-    if (value.length <= 35) {
-      let newValue;
-      if (value.length === 1 && value === "0") {
-        newValue = val;
-        setValue(newValue);
-      } else {
-        newValue = value + val;
-        setValue(newValue);
+  console.log(error);
+  const handleValue = async val => {
+    try {
+      if (value.length <= 35) {
+        let newValue;
+        if (value.length === 1 && value === "0") {
+          newValue = val;
+          setValue(newValue);
+        } else {
+          newValue = value + val;
+          setValue(newValue);
+        }
       }
+      if (value.length > 35) {
+        setLimitReached();
+      }
+    } catch (err) {
+      setError();
+      setValue(err.message);
     }
-    if (value.length > 35) {
-      setLimitReached();
+  };
+
+  const handleEnter = async () => {
+    try {
+      setEnter();
+    } catch (err) {
+      setError();
+      setValue(err.message);
     }
   };
   return (
@@ -42,6 +60,8 @@ const Calculator = props => {
           style={
             result
               ? { backgroundColor: "#e5fbe5" }
+              : error
+              ? { backgroundColor: "#ffb1b1" }
               : { backgroundColor: "#ffffff" }
           }
         >
@@ -108,7 +128,7 @@ const Calculator = props => {
           <button className="button" onClick={() => handleValue("0")}>
             0
           </button>
-          <button className="button enter" onClick={() => setEnter()}>
+          <button className="button enter" onClick={handleEnter}>
             Enter
           </button>
         </div>
@@ -121,7 +141,8 @@ const mapStateToProps = state => {
   return {
     value: state.calculator.value,
     limitReached: state.calculator.limitReached,
-    result: state.calculator.result
+    result: state.calculator.result,
+    error: state.calculator.error
   };
 };
 
@@ -129,7 +150,8 @@ const mapDispatchToProps = {
   setValue,
   setEnter,
   setClear,
-  setLimitReached
+  setLimitReached,
+  setError
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calculator);
