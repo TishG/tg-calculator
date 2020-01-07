@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4ae26c01e413ad949b85abcf13d75451",
+    "revision": "d7c5f642dddc074c712de65b0bdf72af",
     "url": "/tg-calculator/index.html"
   },
   {
-    "revision": "7971eb1bb6fc66df6aa1",
+    "revision": "5f12c35d49b813732411",
     "url": "/tg-calculator/static/css/main.1f3e9e1d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/tg-calculator/static/js/2.fa781e99.chunk.js.LICENSE"
   },
   {
-    "revision": "7971eb1bb6fc66df6aa1",
-    "url": "/tg-calculator/static/js/main.62ade41a.chunk.js"
+    "revision": "5f12c35d49b813732411",
+    "url": "/tg-calculator/static/js/main.3706300e.chunk.js"
   },
   {
     "revision": "2b8a76a003c4e21d503c",
