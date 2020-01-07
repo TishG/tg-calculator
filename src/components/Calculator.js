@@ -46,6 +46,10 @@ const Calculator = props => {
   const handleEnter = async () => {
     try {
       setEnter();
+      if (value[0] === "/") {
+        setError();
+        setValue('Unexpected value "/"');
+      }
     } catch (err) {
       setError();
       setValue(err.message);
