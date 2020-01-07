@@ -20,7 +20,7 @@ const Settings = props => {
       >
         <div
           className="btn color"
-          onClick={() => setBGColor("rgba(240, 248, 255)")}
+          onClick={() => setBGColor("rgba(240, 248, 255, 0.7)")}
         >
           <div className="box blue"></div>
           <div className="name">Blue</div>
