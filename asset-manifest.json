@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tg-calculator/static/css/main.1f3e9e1d.chunk.css",
-    "main.js": "/tg-calculator/static/js/main.3706300e.chunk.js",
-    "main.js.map": "/tg-calculator/static/js/main.3706300e.chunk.js.map",
+    "main.css": "/tg-calculator/static/css/main.e8f92964.chunk.css",
+    "main.js": "/tg-calculator/static/js/main.a0a273d3.chunk.js",
+    "main.js.map": "/tg-calculator/static/js/main.a0a273d3.chunk.js.map",
     "runtime-main.js": "/tg-calculator/static/js/runtime-main.9cdfb078.js",
     "runtime-main.js.map": "/tg-calculator/static/js/runtime-main.9cdfb078.js.map",
     "static/js/2.fa781e99.chunk.js": "/tg-calculator/static/js/2.fa781e99.chunk.js",
     "static/js/2.fa781e99.chunk.js.map": "/tg-calculator/static/js/2.fa781e99.chunk.js.map",
     "index.html": "/tg-calculator/index.html",
-    "precache-manifest.46f03749c113f664bece386974559b9d.js": "/tg-calculator/precache-manifest.46f03749c113f664bece386974559b9d.js",
+    "precache-manifest.592aafc33bda08e3653d6d3512f635b7.js": "/tg-calculator/precache-manifest.592aafc33bda08e3653d6d3512f635b7.js",
     "service-worker.js": "/tg-calculator/service-worker.js",
-    "static/css/main.1f3e9e1d.chunk.css.map": "/tg-calculator/static/css/main.1f3e9e1d.chunk.css.map",
+    "static/css/main.e8f92964.chunk.css.map": "/tg-calculator/static/css/main.e8f92964.chunk.css.map",
     "static/js/2.fa781e99.chunk.js.LICENSE": "/tg-calculator/static/js/2.fa781e99.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.9cdfb078.js",
     "static/js/2.fa781e99.chunk.js",
-    "static/css/main.1f3e9e1d.chunk.css",
-    "static/js/main.3706300e.chunk.js"
+    "static/css/main.e8f92964.chunk.css",
+    "static/js/main.a0a273d3.chunk.js"
   ]
 }
