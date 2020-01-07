@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 .btn:active {
@@ -10,6 +11,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1550895030-823330fc2551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+  object-fit: cover;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 /***** App Componenent *****/
@@ -28,7 +34,7 @@ body {
 /***** Settings Componenent *****/
 .settings {
   margin: auto;
-  width: 190px;
+  width: 200px;
 }
 .settings .btn {
   width: inherit;
@@ -158,8 +164,18 @@ body {
 }
 
 .limit-reached {
-  color: rgba(255, 0, 0, 0.75);
+  color: darkred;
   font-size: 0.7em;
+}
+
+.value .error {
+  font-size: 0.9em;
+  color: darkred;
+}
+
+.value .not-error {
+  font-size: 1em;
+  color: rgb(0, 0, 0, 0.75);
 }
 
 /***** Calculator Component *****/

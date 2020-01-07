@@ -61,14 +61,16 @@ const Calculator = props => {
         <div
           className="screen"
           style={
-            result
-              ? { backgroundColor: "#e5fbe5" }
+            result && !error
+              ? { backgroundColor: "rgb(255,254,237)" }
               : error
               ? { backgroundColor: "#ffb1b1" }
               : { backgroundColor: "#ffffff" }
           }
         >
-          <div className="value">{value}</div>
+          <div className="value">
+            {value && !error ? <div className="not-error">{value}</div>:value && error ? <div className="error">{value}</div> : <div className="not-error">{value}</div>}
+            </div>
           <small
             style={limitReached ? { display: "block" } : { display: "none" }}
             className="limit-reached"

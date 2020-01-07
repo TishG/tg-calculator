@@ -4,7 +4,7 @@ import {
 } from "../constants/settingsConstants";
 
 const initialState = {
-  backgroundColor: "rgb(230,230,250)",
+  backgroundColor: "rgb(230,230,250, 0.7)",
   visible: false
 };
 

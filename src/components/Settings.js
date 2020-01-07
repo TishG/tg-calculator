@@ -20,28 +20,28 @@ const Settings = props => {
       >
         <div
           className="btn color"
-          onClick={() => setBGColor("rgb(240, 248, 255)")}
+          onClick={() => setBGColor("rgba(240, 248, 255)")}
         >
           <div className="box blue"></div>
           <div className="name">Blue</div>
         </div>
         <div
           className="btn color"
-          onClick={() => setBGColor("rgb(210, 248, 210)")}
+          onClick={() => setBGColor("rgba(210, 248, 210, 0.7)")}
         >
           <div className="box green"></div>
           <div className="name">Green</div>
         </div>
         <div
           className="btn color"
-          onClick={() => setBGColor("rgb(255, 233, 236)")}
+          onClick={() => setBGColor("rgba(255, 233, 236, 0.7)")}
         >
           <div className="box pink"></div>
           <div className="name">Pink</div>
         </div>
         <div
           className="btn color"
-          onClick={() => setBGColor("rgb(230, 230, 250)")}
+          onClick={() => setBGColor("rgba(230, 230, 250, 0.7)")}
         >
           <div className="box purple"></div>
           <div className="name">Purple</div>
