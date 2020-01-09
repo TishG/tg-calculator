@@ -11,38 +11,47 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1550895030-823330fc2551?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
+}
+/***** App Componenent *****/
+
+.app {
+  height: 100vh;
   object-fit: cover;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-}
-
-/***** App Componenent *****/
-
-.app {
-  padding-top: 0.5em;
-  min-height: 100vh;
-  height: 100%;
+  background-repeat: no-repeat;
 }
 
 .app .title {
   text-align: center;
+  cursor: default;
+}
+
+.app .overlay {
+  height: 100vh;
+  width: inherit;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(105, 105, 105, 0.2);
 }
 /***** App Componenent *****/
 
 /***** Settings Componenent *****/
 .settings {
   margin: auto;
-  width: 200px;
+  width: 210px;
+  text-align: center;
 }
 .settings .btn {
+  margin-top: 5px;
   width: inherit;
   cursor: pointer;
   border: 1px solid rgb(0, 0, 0, 0.5);
   border-radius: 3px;
-  color: rgb(0, 0, 0, 0.75);
-  background-color: rgba(245, 245, 245);
+  color:rgba(255,255,255, 0.85);
+  /* color: rgb(0, 0, 0, 0.75);
+  background-color: rgba(245, 245, 245); */
   padding: 0.5em;
   transition: 0.3s background-color;
 }
@@ -60,35 +69,39 @@ body {
 }
 
 .settings .bg-color-changer .color {
+  margin-top: 0;
   width: inherit;
   display: flex;
   justify-content: space-between;
-  transition: 0.3s background-color;
+  transition: 0.3s background-image;
+  background-color:rgba(0, 0, 0, 0.85)
 }
 
 .settings .bg-color-changer .color:hover {
   cursor: pointer;
-  background-color: whitesmoke;
-  width: 195px;
+  background-color:rgba(0,0,0,0.95);
+  width: 208px;
 }
 
 .settings .bg-color-changer .color .box {
   width: 20px;
   height: 20px;
-  border: 1px solid rgb(0, 0, 0, 0.75);
+  border: 1px solid rgb(0, 0, 0, 0.55);
+  background-position: center;
+  background-size: cover;
 }
 
-.settings .bg-color-changer .color .box.blue {
-  background-color: rgb(240, 248, 255);
+.settings .bg-color-changer .color .box.clouds {
+  background-image: url("https://images.unsplash.com/photo-1460411794035-42aac080490a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
 }
-.settings .bg-color-changer .color .box.purple {
-  background-color: rgb(230, 230, 250);
+.settings .bg-color-changer .color .box.mountains {
+  background-image: url("https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
 }
-.settings .bg-color-changer .color .box.green {
-  background-color: rgb(210, 248, 210);
+.settings .bg-color-changer .color .box.beach {
+  background-image: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
 }
-.settings .bg-color-changer .color .box.pink {
-  background-color: rgb(255, 233, 236);
+.settings .bg-color-changer .color .box.city {
+  background-image: url("https://images.unsplash.com/photo-1514565131-fce0801e5785?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");
 }
 /***** Settings Componenent *****/
 

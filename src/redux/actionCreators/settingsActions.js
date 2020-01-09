@@ -1,9 +1,9 @@
-import { SET_BACKGROUND_COLOR, SET_VISIBILITY } from "../constants/settingsConstants";
+import { SET_BACKGROUND_IMAGE, SET_VISIBILITY } from "../constants/settingsConstants";
 
-export const setBGColor = color => {
+export const setBGImage = imageURL => {
   return {
-    type: SET_BACKGROUND_COLOR,
-    payload: color
+    type: SET_BACKGROUND_IMAGE,
+    payload: imageURL
   };
 };
 

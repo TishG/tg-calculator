@@ -8,24 +8,25 @@ import Calculator from "./components/Calculator";
 import { connect } from "react-redux";
 
 const App = props => {
-  const { bgColor } = props;
-  //styling
+  const { bgImage } = props;
   const AppStyles = {
-    backgroundColor: bgColor
+    backgroundImage: `url(${bgImage})`
   };
 
   return (
     <div className="app" style={AppStyles}>
+      <div className="overlay">
       <Settings />
       <h1 className="title">TishG Calculator</h1>
       <Calculator />
+      </div>
     </div>
   );
 };
 
 const mapStateToProps = state => {
   return {
-    bgColor: state.settings.backgroundColor
+    bgImage: state.settings.backgroundImage
   };
 };
 
