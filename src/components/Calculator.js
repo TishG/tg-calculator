@@ -1,3 +1,4 @@
+/* eslint no-eval: 0 */
 import React from "react";
 
 //Redux
@@ -7,7 +8,9 @@ import {
   setLimitReached,
   setClear,
   setEnter,
-  setError
+  setError,
+  setRedo,
+  setUndo
 } from "../redux/actionCreators/calculatorActions";
 
 const Calculator = props => {
@@ -20,7 +23,9 @@ const Calculator = props => {
     setValue,
     setClear,
     setEnter,
-    setError
+    setError,
+    setRedo,
+    setUndo
   } = props;
   const handleValue = async val => {
     try {
@@ -45,7 +50,8 @@ const Calculator = props => {
 
   const handleEnter = async () => {
     try {
-      setEnter();
+      const equals = eval(value);
+      setEnter(equals);
       if (value[0] === "/") {
         setError();
         setValue('Unexpected value "/"');
@@ -54,6 +60,22 @@ const Calculator = props => {
       setError();
       setValue(err.message);
     }
+  };
+
+  const handleUndo = () => {
+    // 1) set valueToArray to value converted to array
+    // 2) set end to the last number of valueToArray
+    // 3) pass end into setUndo method
+    // 4) set newValue to valueToArray minus the end number
+    // 5) convert newValue back to a string
+    // 5) pass newValue to setValue method
+  };
+  const handleRedo = () => {
+    // 1) set valueArray to value converted to an array
+    // 2) set previous to the first element in the onBackStorage array.
+    // 3) set newValue to valueToArray + previous
+    // 4) convert newValue to string
+    // 5) pass newValue to setRedo method
   };
   return (
     <div className="calculator">
@@ -69,8 +91,14 @@ const Calculator = props => {
           }
         >
           <div className="value">
-            {value && !error ? <div className="not-error">{value}</div>:value && error ? <div className="error">{value}</div> : <div className="not-error">{value}</div>}
+            <div
+              className={
+                value && !error ? "not-error" : error ? "error" : "not-error"
+              }
+            >
+              {value}
             </div>
+          </div>
           <small
             style={limitReached ? { display: "block" } : { display: "none" }}
             className="limit-reached"
@@ -133,7 +161,19 @@ const Calculator = props => {
           <button className="button" onClick={() => handleValue("0")}>
             0
           </button>
-          <button className="button enter" onClick={handleEnter}>
+          <button
+            className="button op back half-button"
+            onClick={() => handleUndo()}
+          >
+            <i className="fas fa-undo-alt"></i>
+          </button>
+          <button
+            className="button op forward half-button"
+            onClick={() => handleRedo()}
+          >
+            <i className="fas fa-redo-alt"></i>
+          </button>
+          <button className="button enter full-button" onClick={handleEnter}>
             Enter
           </button>
         </div>
@@ -156,7 +196,9 @@ const mapDispatchToProps = {
   setEnter,
   setClear,
   setLimitReached,
-  setError
+  setError,
+  setRedo,
+  setUndo
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Calculator);
