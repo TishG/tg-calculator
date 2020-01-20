@@ -64,32 +64,30 @@ const Calculator = props => {
   };
 
   const handleUndo = () => {
-    if(value === "0") {
-      return false;
-    }
-    if (value.length > 0 && value !== "0") {
-      let valueToArray = value.split("");
-      let end = valueToArray.pop();
-      let newValue = valueToArray.join("");
-      setUndo(end, newValue);
-    }
-    if(value.length === 1) {
-      setValue("0");
-    }
+    if (!result && value !== "0" && !error && !limitReached) {
+      if (value.length > 0 && value !== "0") {
+        let valueToArray = value.split("");
+        let end = valueToArray.pop();
+        let newValue = valueToArray.join("");
+        setUndo(end, newValue);
+      }
+      if (value.length === 1) {
+        setValue("0");
+      }
+    } else return false;
   };
   const handleRedo = () => {
-    if (onBackStorage.length) {
+    if (onBackStorage.length && !result && !error && !limitReached) {
       let previous = onBackStorage.pop();
-      let newValue;
-      if(value === "0") {
+      let newValue; 
+      if (value === "0") {
         newValue = previous;
         setRedo(newValue);
       } else {
-      newValue = value + previous;
-      setRedo(newValue);
+        newValue = value + previous;
+        setRedo(newValue);
       }
-    }
-    else return false;
+    } else return false;
   };
   return (
     <div className="calculator">

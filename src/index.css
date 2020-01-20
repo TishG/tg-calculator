@@ -209,7 +209,7 @@ body {
 }
 
 .limit-reached {
-  color: darkred;
+  color: #ec2929;
   font-size: 0.7em;
 }
 
