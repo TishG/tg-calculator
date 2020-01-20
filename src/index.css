@@ -53,7 +53,7 @@ body {
   border-radius: 3px;
   color: rgba(255, 255, 255, 0.85);
   padding: 0.5em;
-  transition: 0.3s background-color;
+  transition: 0.5s background-color;
 }
 
 .settings .bg-color-changer {
