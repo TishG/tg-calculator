@@ -8,7 +8,7 @@ import Calculator from "./components/Calculator";
 import { connect } from "react-redux";
 
 const App = props => {
-  const { bgImage } = props;
+  const { bgImage} = props;
   const AppStyles = {
     backgroundImage: `url(${bgImage})`
   };

@@ -17,8 +17,6 @@ const initialState = {
 };
 
 export const calculatorReducer = (state = initialState, action) => {
-  console.log("onBackStorage", state.onBackStorage);
-  console.log("value", state.value);
   switch (action.type) {
     case SET_VALUE:
       return {
@@ -56,11 +54,13 @@ export const calculatorReducer = (state = initialState, action) => {
     case SET_UNDO:
       return {
         ...state,
-        onBackStorage: [...state.onBackStorage, action.payload]
+        onBackStorage: [...state.onBackStorage, action.payload.end],
+        value: action.payload.newValue
       };
     case SET_REDO:
       return {
-        ...state
+        ...state,
+        value: action.payload
       };
     default:
       return state;

@@ -40,15 +40,19 @@ export const setError = () => {
   };
 };
 
-export const setUndo = (end) => {
+export const setUndo = (end, newValue) => {
   return {
     type: SET_UNDO,
-    payload:end
+    payload: {
+      end,
+      newValue
+    }
   };
 };
 
-export const setRedo = () => {
+export const setRedo = (newValue) => {
   return {
-    type: SET_REDO
+    type: SET_REDO,
+    payload:newValue
   };
 };

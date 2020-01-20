@@ -25,7 +25,8 @@ const Calculator = props => {
     setEnter,
     setError,
     setRedo,
-    setUndo
+    setUndo,
+    onBackStorage
   } = props;
   const handleValue = async val => {
     try {
@@ -63,19 +64,32 @@ const Calculator = props => {
   };
 
   const handleUndo = () => {
-    // 1) set valueToArray to value converted to array
-    // 2) set end to the last number of valueToArray
-    // 3) pass end into setUndo method
-    // 4) set newValue to valueToArray minus the end number
-    // 5) convert newValue back to a string
-    // 5) pass newValue to setValue method
+    if(value === "0") {
+      return false;
+    }
+    if (value.length > 0 && value !== "0") {
+      let valueToArray = value.split("");
+      let end = valueToArray.pop();
+      let newValue = valueToArray.join("");
+      setUndo(end, newValue);
+    }
+    if(value.length === 1) {
+      setValue("0");
+    }
   };
   const handleRedo = () => {
-    // 1) set valueArray to value converted to an array
-    // 2) set previous to the first element in the onBackStorage array.
-    // 3) set newValue to valueToArray + previous
-    // 4) convert newValue to string
-    // 5) pass newValue to setRedo method
+    if (onBackStorage.length) {
+      let previous = onBackStorage.pop();
+      let newValue;
+      if(value === "0") {
+        newValue = previous;
+        setRedo(newValue);
+      } else {
+      newValue = value + previous;
+      setRedo(newValue);
+      }
+    }
+    else return false;
   };
   return (
     <div className="calculator">
@@ -187,7 +201,8 @@ const mapStateToProps = state => {
     value: state.calculator.value,
     limitReached: state.calculator.limitReached,
     result: state.calculator.result,
-    error: state.calculator.error
+    error: state.calculator.error,
+    onBackStorage: state.calculator.onBackStorage
   };
 };
 
