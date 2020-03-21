@@ -27,8 +27,9 @@ const Settings = props => {
       {/* <button className="btn main not-hovered"><i class="fas fa-cog"></i></button> */}
       <button
         className="btn main hovered"
-        onClick={setVisibility}
         style={conditionalButtonStyles()}
+        onClick={setVisibility}
+        onBlur={setVisibility}
       >
       {conditionalButtonText()}
       </button>
