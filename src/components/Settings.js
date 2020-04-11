@@ -9,7 +9,6 @@ import {
 
 const Settings = props => {
   const { visible, setVisibility, setBGImage } = props;
-  console.log(visible);
   const conditionalButtonStyles = () => {
     return visible
       ? { backgroundColor: "rgba(220,20,60, 0.5)" }
